@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 alert alert-info">
+                <h3>Actividad #3 - Ingeniería Web II</h3>
+                <p>
+                    El actual proyecto tiene como propósito evidenciar un ejemplo del patrón de arquitectura orientado a microservicios. 
+                </p>
+                <p>
+                    Presentamos dos servicios que consisten en:
+                </p>
+                <ol>
+                    <li>Un servicio <strong>POST</strong> para una validación de inicio de sesión <strong>/uniminuto_services/login</strong></li>
+                    <li>Un servicio <strong>GET</strong> para una consulta de pokemones <strong>/uniminuto_services/get-pokemons</strong></li>
+                </ol>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <p>
+                    Ingresa el usuario <strong>admin</strong> y clave <strong>123</strong> para validar el inicio de sesión
+                </p>
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" class="form-control" id="usuario">
+                    <label for="clave">Contraseña</label>
+                    <input type="password" class="form-control" id="clave">
+                    <hr>
+                    <button class="btn btn-primary" onclick="login()">Iniciar sesión</button>
+                </div>
+                <div id="login_result"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <p>
+                    Da clic en <strong>Consulta pokemones</strong> para obtener la lista de pokemons
+                </p>
+                <button class="btn btn-primary" onclick="getPokemonsList()">Consultar pokemones</button>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="services/main_services.js"></script>
+</body>
+</html>
